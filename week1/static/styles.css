@@ -13,3 +13,7 @@ footer{
     margin-top: 5rem;
     text-align: center;
 }
+.alignleft {
+    float: left !important;
+    margin-right:15px
+}
