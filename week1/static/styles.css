@@ -28,3 +28,16 @@ p {
     margin-right: auto;
     max-width: 80%;
   }
+  ul{
+    width: 60%;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    list-style-type:none;
+}
+
+li{
+    display: flex;
+    justify-content: center;
+    width: 150px;
+} 
