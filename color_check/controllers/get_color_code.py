@@ -5,12 +5,30 @@
 # raise and handle an error that helps both you as a developer,
 # for example by logging the request and error, and the user,
 # letting them know that their color doesn't exist.
+import json 
+  
+# Opening JSON file 
 
+
+# Iterating through the json 
+# list 
+#for i in data: 
+    #print(i) 
+  
+# Closing file 
 def get_color_code(color_name):
+    
+    with open('color_check/data/css-color-names.json', "r") as data:
+  
+    # returns JSON object as  
+    # a dictionary 
+        dictionary = json.load(data) 
+
     # this is where you should add your logic to check the color.
     # Open the file at data/css-color-names.json, and return the hex code
     # The file can be considered as JSON format, or as a Python dictionary.
-
-    hex_code = '#0000ff'
-
+        hex_code= dictionary.get(color_name,"this color doesnt exist")
+         
     return hex_code
+
+
