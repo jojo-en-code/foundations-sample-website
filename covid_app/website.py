@@ -1,5 +1,6 @@
 from os import getenv
 from shutil import copyfile
+from datetime import date
 
 from flask import Flask, request
 from flask import render_template
@@ -45,8 +46,9 @@ def create_meeting():
         # app.logger.info(name)
         # turn this into an SQL command. For example:
         # "Adam" --> "INSERT INTO Meetings (name) VALUES("Adam");"
-        sql_insert = "INSERT INTO Meetings (name) VALUES (\"{name}\");".format(
-            name=name)
+        currentDate = date.today()
+        sql_insert = "INSERT INTO Meetings (name,date) VALUES (\"{name}\",\"{Date}\");".format(
+            name=name, Date=currentDate )
 
         # connect to the database with the filename configured above
         # returning a 2-tuple that contains a connection and cursor object
