@@ -47,7 +47,7 @@ def create_meeting():
         # turn this into an SQL command. For example:
         # "Adam" --> "INSERT INTO Meetings (name) VALUES("Adam");"
         currentDate = date.today()
-        sql_insert = "INSERT INTO Meetings (name,date) VALUES (\"{name}\",\"{Date}\");".format(
+        sql_insert = "INSERT INTO Meetings VALUES (\"{name}\",\"{Date}\");".format(
             name=name, Date=currentDate )
 
         # connect to the database with the filename configured above
