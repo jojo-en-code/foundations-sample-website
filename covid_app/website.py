@@ -1,5 +1,6 @@
 from os import getenv
 from shutil import copyfile
+from datetime import date
 
 
 from flask import Flask, request
